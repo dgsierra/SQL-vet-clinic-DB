@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS public.animals
 (
     id bigint NOT NULL,
     name text COLLATE pg_catalog."default" NOT NULL,
+    date_of_birth date,
     scape_attempts bigint,
     neutered boolean NOT NULL,
     weight_kg numeric,
