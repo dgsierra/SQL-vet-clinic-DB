@@ -13,3 +13,6 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.animals
     OWNER to postgres;
+
+ALTER TABLE public.animals
+    ADD COLUMN species text COLLATE pg_catalog."default";
