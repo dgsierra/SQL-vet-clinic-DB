@@ -13,3 +13,26 @@ INSERT INTO public.animals(
 	(9, 'Boarmon', '06-07-2005', 7, true, 20.4, null),
 	(9, 'Blossom', '09-13-1998', 3, true, 17, null),
 	(10, 'Ditto', '05-14-2022', 4, true, 22, null);
+
+INSERT INTO owners(full_name, age)
+VALUES
+  ('Sam Smith', 34),
+  ('Jennifer Orwell', 19),
+  ('Bob', 45),
+  ('Melody Pond', 77),
+  ('Dean Winchester', 14),
+  ('Jodie Whittaker', 38);
+
+INSERT INTO species(name)
+VALUES
+  ('Pokemon'),
+  ('Digimon');
+
+BEGIN TRANSACTION;
+
+UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
+
+UPDATE animal SET species_id = 1 WHERE name NOT LIKE '%mon';
+
+COMMIT;
+
