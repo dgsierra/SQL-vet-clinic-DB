@@ -36,3 +36,18 @@ UPDATE animal SET species_id = 1 WHERE name NOT LIKE '%mon';
 
 COMMIT;
 
+/* RELATE TABLES */
+
+BEGIN TRANSACTION;
+
+UPDATE animal SET owners_id = 1 WHERE name = 'Agumon';
+
+UPDATE animal SET owners_id = 2 WHERE name  = 'Gabumon' OR name ='Pikachu';
+
+UPDATE animals SET owners_id = 3 WHERE name = 'Devimon' OR name = 'Plantmon';
+
+UPDATE animals SET owners_id = 4 WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+
+UPDATE animals SET owners_id = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
+
+COMMIT;
